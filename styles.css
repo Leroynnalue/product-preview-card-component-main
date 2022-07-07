@@ -111,7 +111,7 @@ body{
     color: hsl(228, 45%, 44%);
 }
 
-@media only screen and (max-width: 414px){
+@media only screen and (max-width: 768px){
     .product{
         flex-direction:column;
     }

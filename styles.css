@@ -1,0 +1,127 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+*,*::after,*::before{
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    transition:all 250ms;
+}
+
+:root{
+    --dark-cyan:hsl(158, 36%, 37%);
+    --cream:hsl(30, 38%, 92%);
+    --v-dark-blue:hsl(212, 21%, 14%);
+    --dark-grayish-blue:hsl(228, 12%, 48%);
+    --white:hsl(0,0%,100%);
+}
+
+body{
+    width:100%;
+    height:100vh;
+    display:grid;
+    place-items:center;
+    background-color:var(--cream);
+    padding:2em 0;
+}
+
+.product{
+    max-width:600px;
+    width:90%;
+    background-color:var(--white);
+    border-radius:.25em;
+    display:flex;
+}
+
+.product__image{
+    width:50%;
+    object-fit: cover;
+}
+
+.product__image--two{
+    display:none;
+}
+
+.product__details{
+    min-width:40%;
+    padding:2em;
+}
+
+.product__details--info,
+.product__details--name,
+.product__details--logo{
+    margin:.5em 0;
+}
+
+.product__details--logo{
+    font-weight:500;
+    text-transform:uppercase;
+    letter-spacing:.25em;
+}
+
+.product__details--name{
+    font-family:Fraunces;
+    font-size:3em;
+    font-weight:700;
+}
+
+.product__details--info{
+    font-size:1.2em;
+}
+
+.product__details--prices{
+    margin:2em 0;
+    display:flex;
+    align-items:center;
+    color:var(--dark-cyan);
+}
+
+.product__details--prices h1{
+    font-family:Fraunces;
+    font-size:3em;
+}
+
+.product__details--prices strike{
+    margin:0 2em;
+}
+
+.product__details--cta{
+    font-size:1em;
+    padding:.75em;
+    background-color:var(--dark-cyan);
+    display:flex;
+    justify-content:center;
+    color:#FFF;
+    border-radius:.25em;
+    cursor: pointer;
+    font-weight:500;
+}
+
+.product__details--cta:hover{
+    background-color:var(--v-dark-blue);
+}
+
+.product__details--cta img{
+    margin:0 1em;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 414px){
+    .product{
+        flex-direction:column;
+    }
+    .product__image{
+        width:100%;
+    }
+    .product__image--one{
+        display:none;
+    }
+    .product__image--two{
+        display:flex;
+    }
+}
